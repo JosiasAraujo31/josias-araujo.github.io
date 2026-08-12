@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josias Araújo | Python Developer & TI</title>
+    <!-- Tailwind CSS para estilização rápida, moderna e leve -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#0B1120',
+                        bgCard: '#111827',
+                        textMain: '#F8FAFC',
+                        textMuted: '#94A3B8',
+                        accent: '#22C55E',
+                        accentBlue: '#38BDF8'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-bgMain text-textMain font-sans antialiased selection:bg-accent selection:text-bgMain">
+
+    <!-- HEADER / MENU -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-bgMain/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#inicio" class="font-bold text-lg tracking-wider text-accent">JOSIAS.DEV</a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-textMuted">
+                <a href="#sobre" class="hover:text-accent transition-colors">Sobre</a>
+                <a href="#projetos" class="hover:text-accent transition-colors">Projetos</a>
+                <a href="#experiencia" class="hover:text-accent transition-colors">Experiência</a>
+                <a href="#tecnologias" class="hover:text-accent transition-colors">Tecnologias</a>
+                <a href="#contato" class="hover:text-accent transition-colors">Contato</a>
+            </nav>
+
+            <a href="https://github.com/josias-araujo" target="_blank" class="hidden md:inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-textMain px-4 py-2 rounded-lg text-sm font-medium transition-all border border-slate-700">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl text-center">
+            <div class="inline-block mb-4 px-3 py-1 bg-slate-800/80 border border-slate-700 rounded-full text-xs font-semibold text-accent tracking-wide uppercase">
+                Python Developer | Automação | Suporte & Infraestrutura
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Josias Araújo
+            </h1>
+            <p class="text-lg md:text-xl text-textMuted max-w-2xl mx-auto mb-10 leading-relaxed">
+                Profissional de Tecnologia da Informação com experiência sólida em suporte N1/N2, servidores Windows, redes e Active Directory. Transformando problemas reais de TI em soluções automatizadas, simples e eficientes com <span class="text-accent font-semibold">Python</span>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="bg-accent hover:bg-emerald-600 text-bgMain font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-accent/20">
+                    Ver Projetos
+                </a>
+                <a href="https://github.com/josias-araujo" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+                <span class="text-accent">#</span> Sobre Mim
+            </h2>
+            <div class="bg-bgCard border border-slate-800 p-8 rounded-2xl shadow-xl space-y-6 text-textMuted leading-relaxed">
+                <p class="text-textMain font-medium text-lg">
+                    De suporte técnico à automação: minha trajetória começou diretamente na resolução de incidentes e infraestrutura corporativa.
+                </p>
+                <p>
+                    Atuei com suporte N1/N2, manutenção de computadores, servidores Windows, Active Directory, redes, impressoras e gestão de usuários. Vivenciando o dia a dia da TI, percebi que muitos processos repetitivos consumiam tempo e poderiam ser resolvidos de forma inteligente através da programação.
+                </p>
+                <p>
+                    Hoje utilizo o <strong class="text-textMain">Python</strong> como principal ferramenta para construir ferramentas escaláveis de monitoramento, controle de ativos e gestão de chamados. Minha formação em <strong class="text-textMain">Análise e Desenvolvimento de Sistemas</strong> une perfeitamente essa bagagem prática de infraestrutura com engenharia de software moderna.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS PRINCIPAIS -->
+    <section id="projetos" class="py-24 px-6 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3 flex items-center gap-3">
+                    <span class="text-accent">#</span> Projetos Principais
+                </h2>
+                <p class="text-textMuted">Soluções desenvolvidas para resolver dores reais de ambientes de TI.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- PROJETO 01 -->
+                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-textMain">IT Support Manager</h3>
+                            <span class="text-xs bg-emerald-950 text-accent border border-emerald-800 px-2.5 py-1 rounded-full font-medium">Web App</span>
+                        </div>
+                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
+                            Sistema web completo para registrar, categorizar, priorizar e acompanhar chamados de suporte técnico, gerando indicadores eficientes para equipes de TI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">SQLAlchemy</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">PostgreSQL</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4 border-t border-slate-800">
+                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
+                            <i class="fab fa-github"></i> Repositório
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 02 -->
+                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-textMain">IT Asset Manager</h3>
+                            <span class="text-xs bg-sky-950 text-accentBlue border border-sky-800 px-2.5 py-1 rounded-full font-medium">Inventário</span>
+                        </div>
+                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
+                            Sistema de controle de equipamentos corporativos (computadores, impressoras e ativos), centralizando números de série, IPs, setores e histórico de manutenção.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Jinja2</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">SQLite</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4 border-t border-slate-800">
+                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
+                            <i class="fab fa-github"></i> Repositório
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 03 -->
+                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-textMain">Network & Server Monitor</h3>
+                            <span class="text-xs bg-emerald-950 text-accent border border-emerald-800 px-2.5 py-1 rounded-full font-medium">Infra & Redes</span>
+                        </div>
+                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
+                            Aplicação de monitoramento automatizado que verifica a conectividade, portas e disponibilidade HTTP de servidores críticos (AD, Servidor Web, Bancos de Dados) em tempo real.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Asyncio</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4 border-t border-slate-800">
+                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
+                            <i class="fab fa-github"></i> Repositório
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 04 -->
+                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-textMain">IT Automation Toolkit</h3>
+                            <span class="text-xs bg-sky-950 text-accentBlue border border-sky-800 px-2.5 py-1 rounded-full font-medium">CLI / Scripts</span>
+                        </div>
+                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
+                            Kit de scripts em Python para coleta automatizada de dados de hardware/sistema (IP, RAM, disco, processos), gerando relatórios rápidos direto pelo terminal.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Automação OS</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">MySQL Connector</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4 border-t border-slate-800">
+                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
+                            <i class="fab fa-github"></i> Repositório
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="text-accent">#</span> Experiência Profissional
+            </h2>
+
+            <div class="space-y-8 border-l-2 border-slate-800 pl-6 ml-2">
+                
+                <!-- Item 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-accent border-4 border-bgMain"></div>
+                    <span class="text-xs text-accent font-semibold tracking-wider uppercase">01/2026 — 07/2026</span>
+                    <h3 class="text-lg font-bold text-textMain mt-1">Técnico de Informática — HCOE</h3>
+                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
+                        Atuação com suporte técnico N1/N2, manutenção corretiva e preventiva de computadores e sistemas operacionais, administração de usuários e acessos, infraestrutura de redes e periféricos.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-bgMain"></div>
+                    <span class="text-xs text-textMuted font-semibold tracking-wider uppercase">08/2025 — 01/2026</span>
+                    <h3 class="text-lg font-bold text-textMain mt-1">Técnico de Suporte — Avance Tecnologia</h3>
+                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
+                        Suporte técnico remoto e presencial estruturado, configuração e suporte a servidores Windows, manutenção de infraestrutura de TI e atendimento focado em resolução de incidentes.
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-bgMain"></div>
+                    <span class="text-xs text-textMuted font-semibold tracking-wider uppercase">02/2025 — 07/2025</span>
+                    <h3 class="text-lg font-bold text-textMain mt-1">Estagiário de TI — SEDUC</h3>
+                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
+                        Atendimento técnico a usuários, manutenção de equipamentos de informática, instalação e configuração de sistemas operacionais e suporte a redes locais.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section id="tecnologias" class="py-24 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="text-accent">#</span> Tecnologias & Stack
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Dev -->
+                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
+                    <h3 class="font-bold text-textMain mb-4 text-accent">Desenvolvimento</h3>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li>• Python</li>
+                        <li>• FastAPI & APIs REST</li>
+                        <li>• SQL / SQLAlchemy</li>
+                        <li>• MySQL & PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <!-- Infra -->
+                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
+                    <h3 class="font-bold text-textMain mb-4 text-accentBlue">Infraestrutura</h3>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li>• Windows Server</li>
+                        <li>• Active Directory</li>
+                        <li>• Redes (TCP/IP, DNS, DHCP)</li>
+                        <li>• Suporte N1 / N2</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Practices -->
+                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
+                    <h3 class="font-bold text-textMain mb-4 text-emerald-400">Ferramentas & Práticas</h3>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li>• Git & GitHub</li>
+                        <li>• Docker</li>
+                        <li>• Linux & VS Code</li>
+                        <li>• Clean Code & POO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / CTA -->
+    <section id="contato" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40 text-center">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <h2 class="text-3xl font-extrabold text-textMain">Vamos construir soluções melhores?</h2>
+            <p class="text-textMuted max-w-xl mx-auto">
+                Da infraestrutura ao código. Experiência prática em TI aplicada à criação de soluções inteligentes com Python.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="mailto:seu-email@exemplo.com" class="bg-accent hover:bg-emerald-600 text-bgMain font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-accent/20 flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Entrar em Contato
+                </a>
+                <a href="https://github.com/josias-araujo" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-800 text-center text-xs text-textMuted">
+        <p>© 2026 Josias Araújo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
