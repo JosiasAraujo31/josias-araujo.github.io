@@ -1,324 +1,885 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josias Araújo | Python Developer & TI</title>
-    <!-- Tailwind CSS para estilização rápida, moderna e leve -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bgMain: '#0B1120',
-                        bgCard: '#111827',
-                        textMain: '#F8FAFC',
-                        textMuted: '#94A3B8',
-                        accent: '#22C55E',
-                        accentBlue: '#38BDF8'
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-bgMain text-textMain font-sans antialiased selection:bg-accent selection:text-bgMain">
 
-    <!-- HEADER / MENU -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-bgMain/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#inicio" class="font-bold text-lg tracking-wider text-accent">JOSIAS.DEV</a>
-            
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-textMuted">
-                <a href="#sobre" class="hover:text-accent transition-colors">Sobre</a>
-                <a href="#projetos" class="hover:text-accent transition-colors">Projetos</a>
-                <a href="#experiencia" class="hover:text-accent transition-colors">Experiência</a>
-                <a href="#tecnologias" class="hover:text-accent transition-colors">Tecnologias</a>
-                <a href="#contato" class="hover:text-accent transition-colors">Contato</a>
+    <title>Josias Araújo | Desenvolvedor</title>
+
+    <meta name="description"
+        content="Portfólio profissional de Josias Araújo — Desenvolvimento, automação, IA, infraestrutura e tecnologia.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         FUNDO DA PLACA-MÃE
+    ====================================================== -->
+
+    <canvas id="circuitCanvas"></canvas>
+
+    <div class="noise"></div>
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                JA
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav">
+
+                <a href="#home" class="nav-link active">
+                    <span>01.</span> Início
+                </a>
+
+                <a href="#sobre" class="nav-link">
+                    <span>02.</span> Sobre
+                </a>
+
+                <a href="#skills" class="nav-link">
+                    <span>03.</span> Skills
+                </a>
+
+                <a href="#projetos" class="nav-link">
+                    <span>04.</span> Projetos
+                </a>
+
+                <a href="#experiencia" class="nav-link">
+                    <span>05.</span> Experiência
+                </a>
+
+                <a href="#contato" class="nav-link">
+                    <span>06.</span> Contato
+                </a>
+
             </nav>
 
-            <a href="https://github.com/josias-araujo" target="_blank" class="hidden md:inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-textMain px-4 py-2 rounded-lg text-sm font-medium transition-all border border-slate-700">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+            <button class="menu-button" id="menuButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
+
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 px-6">
-        <div class="max-w-4xl text-center">
-            <div class="inline-block mb-4 px-3 py-1 bg-slate-800/80 border border-slate-700 rounded-full text-xs font-semibold text-accent tracking-wide uppercase">
-                Python Developer | Automação | Suporte & Infraestrutura
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                Josias Araújo
-            </h1>
-            <p class="text-lg md:text-xl text-textMuted max-w-2xl mx-auto mb-10 leading-relaxed">
-                Profissional de Tecnologia da Informação com experiência sólida em suporte N1/N2, servidores Windows, redes e Active Directory. Transformando problemas reais de TI em soluções automatizadas, simples e eficientes com <span class="text-accent font-semibold">Python</span>.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projetos" class="bg-accent hover:bg-emerald-600 text-bgMain font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-accent/20">
-                    Ver Projetos
-                </a>
-                <a href="https://github.com/josias-araujo" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- SOBRE MIM -->
-    <section id="sobre" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
-                <span class="text-accent">#</span> Sobre Mim
-            </h2>
-            <div class="bg-bgCard border border-slate-800 p-8 rounded-2xl shadow-xl space-y-6 text-textMuted leading-relaxed">
-                <p class="text-textMain font-medium text-lg">
-                    De suporte técnico à automação: minha trajetória começou diretamente na resolução de incidentes e infraestrutura corporativa.
-                </p>
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section id="home" class="hero section">
+
+            <div class="hero-grid"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+
+                    <div class="status">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            DISPONÍVEL PARA NOVOS PROJETOS
+                        </span>
+
+                    </div>
+
+                    <p class="hero-code">
+                        &lt;developer /&gt;
+                    </p>
+
+                    <h1>
+
+                        Transformando
+                        <span class="gradient-text">
+                            tecnologia
+                        </span>
+
+                        em experiências
+                        digitais.
+
+                    </h1>
+
+                    <p class="hero-description">
+
+                        Desenvolvedor focado em criar soluções modernas,
+                        automações inteligentes, sistemas web e experiências
+                        digitais de alto nível.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projetos" class="btn btn-primary">
+
+                            <span>Explorar projetos</span>
+
+                            <span class="btn-arrow">↗</span>
+
+                        </a>
+
+                        <a href="#contato" class="btn btn-outline">
+
+                            Vamos conversar
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-social">
+
+                        <a href="#" aria-label="GitHub">GH</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FOTO / CARD TECNOLÓGICO
+                ================================================== -->
+
+                <div class="hero-visual reveal">
+
+                    <div class="profile-card">
+
+                        <div class="profile-grid"></div>
+
+                        <div class="scan-line"></div>
+
+                        <div class="profile-image-wrapper">
+
+                            <!-- COLOQUE SUA FOTO AQUI -->
+                            <img
+                                src="assets/profile.jpg"
+                                alt="Foto de perfil"
+                                class="profile-image">
+
+                            <div class="image-overlay"></div>
+
+                        </div>
+
+                        <div class="profile-corner corner-1"></div>
+                        <div class="profile-corner corner-2"></div>
+                        <div class="profile-corner corner-3"></div>
+                        <div class="profile-corner corner-4"></div>
+
+
+                        <div class="profile-data top-data">
+
+                            <span>STATUS</span>
+                            <strong>ONLINE</strong>
+
+                        </div>
+
+
+                        <div class="profile-data bottom-data">
+
+                            <span>IDENTITY</span>
+
+                            <strong>
+                                DEVELOPER_01
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMINAL -->
+
+                    <div class="terminal">
+
+                        <div class="terminal-header">
+
+                            <div class="terminal-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>system_terminal</span>
+
+                        </div>
+
+                        <div class="terminal-body">
+
+                            <p>
+                                <span class="terminal-green">
+                                    $
+                                </span>
+                                whoami
+                            </p>
+
+                            <p class="terminal-output">
+                                Josias Araújo
+                            </p>
+
+                            <p>
+                                <span class="terminal-green">
+                                    $
+                                </span>
+                                status
+                            </p>
+
+                            <p class="terminal-output">
+                                building_the_future...
+                            </p>
+
+                            <p>
+                                <span class="terminal-green">
+                                    $
+                                </span>
+                                _
+                                <span class="terminal-cursor"></span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                <span>SCROLL</span>
+
+                <div class="scroll-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SOBRE
+        ====================================================== -->
+
+        <section id="sobre" class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            SOBRE MIM
+                        </span>
+
+                        <h2>
+                            Construindo soluções
+                            <span>fora do padrão.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text reveal">
+
+                        <p class="large-text">
+
+                            Tecnologia para mim não é apenas escrever código.
+                            É transformar problemas complexos em soluções
+                            simples, eficientes e inteligentes.
+
+                        </p>
+
+                        <p>
+
+                            Trabalho com desenvolvimento, automação,
+                            inteligência artificial, infraestrutura e
+                            tecnologias modernas para criar experiências
+                            digitais que realmente geram valor.
+
+                        </p>
+
+                        <p>
+
+                            Meu objetivo é unir criatividade, tecnologia e
+                            performance em cada projeto.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-stats reveal">
+
+                        <div class="stat-card">
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <span>
+                                Desenvolvimento
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>
+                                02
+                            </strong>
+
+                            <span>
+                                Automação
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>
+                                03
+                            </strong>
+
+                            <span>
+                                Inteligência Artificial
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>
+                                04
+                            </strong>
+
+                            <span>
+                                Infraestrutura
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
+
+        <section id="skills" class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            TECNOLOGIAS
+                        </span>
+
+                        <h2>
+                            Minha stack
+                            <span>tecnológica.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card reveal">
+
+                        <div class="skill-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            Desenvolvimento
+                        </h3>
+
+                        <p>
+                            Criação de aplicações modernas,
+                            responsivas e escaláveis.
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card reveal">
+
+                        <div class="skill-icon">
+                            AI
+                        </div>
+
+                        <h3>
+                            Inteligência Artificial
+                        </h3>
+
+                        <p>
+                            Agentes inteligentes, automações e
+                            integração de IA.
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>LLM</span>
+                            <span>Agents</span>
+                            <span>Automation</span>
+                            <span>API</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card reveal">
+
+                        <div class="skill-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Automação
+                        </h3>
+
+                        <p>
+                            Integração entre sistemas e
+                            processos automatizados.
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>n8n</span>
+                            <span>Docker</span>
+                            <span>API</span>
+                            <span>Webhook</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card reveal">
+
+                        <div class="skill-icon">
+                            &gt;_
+                        </div>
+
+                        <h3>
+                            Infraestrutura
+                        </h3>
+
+                        <p>
+                            Servidores, Linux, redes,
+                            containers e ambientes.
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Linux</span>
+                            <span>Docker</span>
+                            <span>Windows Server</span>
+                            <span>AD</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJETOS
+        ====================================================== -->
+
+        <section id="projetos" class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            PORTFÓLIO
+                        </span>
+
+                        <h2>
+                            Projetos que
+                            <span>criei.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-type">
+                                AUTOMATION / AI
+                            </span>
+
+                            <h3>
+                                AI Automation
+                            </h3>
+
+                            <p>
+                                Sistema de automação inteligente
+                                conectado a APIs e agentes de IA.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>AI</span>
+                                <span>n8n</span>
+                                <span>API</span>
+
+                            </div>
+
+                            <a href="#" class="project-link">
+                                Ver projeto ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-type">
+                                WEB / DESIGN
+                            </span>
+
+                            <h3>
+                                Digital Experience
+                            </h3>
+
+                            <p>
+                                Interface moderna desenvolvida
+                                com foco em experiência do usuário.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+
+                            </div>
+
+                            <a href="#" class="project-link">
+                                Ver projeto ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-type">
+                                INFRASTRUCTURE
+                            </span>
+
+                            <h3>
+                                Infrastructure Lab
+                            </h3>
+
+                            <p>
+                                Ambiente de infraestrutura com
+                                servidores, containers e automação.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Linux</span>
+                                <span>Docker</span>
+                                <span>Server</span>
+
+                            </div>
+
+                            <a href="#" class="project-link">
+                                Ver projeto ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIÊNCIA
+        ====================================================== -->
+
+        <section id="experiencia" class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            EXPERIÊNCIA
+                        </span>
+
+                        <h2>
+                            Minha
+                            <span>jornada.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <span class="timeline-date">
+                            2026 — ATUAL
+                        </span>
+
+                        <h3>
+                            Desenvolvimento & Tecnologia
+                        </h3>
+
+                        <p>
+                            Desenvolvimento de soluções digitais,
+                            automações e integração de sistemas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <span class="timeline-date">
+                            EXPERIÊNCIA
+                        </span>
+
+                        <h3>
+                            Infraestrutura & Sistemas
+                        </h3>
+
+                        <p>
+                            Administração de ambientes,
+                            servidores, redes e sistemas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <span class="timeline-date">
+                            EVOLUÇÃO CONTÍNUA
+                        </span>
+
+                        <h3>
+                            Pesquisa & Desenvolvimento
+                        </h3>
+
+                        <p>
+                            Estudo constante de novas tecnologias,
+                            inteligência artificial e automação.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section id="contato" class="contact section section-dark">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <div class="contact-grid"></div>
+
+                    <span class="section-label">
+                        05 / CONTATO
+                    </span>
+
+                    <h2>
+                        Vamos construir
+                        <span>algo incrível?</span>
+                    </h2>
+
+                    <p>
+                        Tem um projeto, ideia ou problema que precisa
+                        de uma solução tecnológica?
+                    </p>
+
+                    <a href="mailto:seuemail@email.com"
+                        class="btn btn-primary">
+
+                        Entrar em contato
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <span class="footer-logo">
+                    &lt;JA /&gt;
+                </span>
+
                 <p>
-                    Atuei com suporte N1/N2, manutenção de computadores, servidores Windows, Active Directory, redes, impressoras e gestão de usuários. Vivenciando o dia a dia da TI, percebi que muitos processos repetitivos consumiam tempo e poderiam ser resolvidos de forma inteligente através da programação.
+                    Desenvolvendo o futuro através da tecnologia.
                 </p>
-                <p>
-                    Hoje utilizo o <strong class="text-textMain">Python</strong> como principal ferramenta para construir ferramentas escaláveis de monitoramento, controle de ativos e gestão de chamados. Minha formação em <strong class="text-textMain">Análise e Desenvolvimento de Sistemas</strong> une perfeitamente essa bagagem prática de infraestrutura com engenharia de software moderna.
-                </p>
+
             </div>
+
+            <div>
+
+                <span class="footer-copy">
+                    © 2026 Josias Araújo
+                </span>
+
+            </div>
+
         </div>
-    </section>
 
-    <!-- PROJETOS PRINCIPAIS -->
-    <section id="projetos" class="py-24 px-6 border-t border-slate-800/60">
-        <div class="max-w-6xl mx-auto">
-            <div class="mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold mb-3 flex items-center gap-3">
-                    <span class="text-accent">#</span> Projetos Principais
-                </h2>
-                <p class="text-textMuted">Soluções desenvolvidas para resolver dores reais de ambientes de TI.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- PROJETO 01 -->
-                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-textMain">IT Support Manager</h3>
-                            <span class="text-xs bg-emerald-950 text-accent border border-emerald-800 px-2.5 py-1 rounded-full font-medium">Web App</span>
-                        </div>
-                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
-                            Sistema web completo para registrar, categorizar, priorizar e acompanhar chamados de suporte técnico, gerando indicadores eficientes para equipes de TI.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">SQLAlchemy</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">PostgreSQL</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pt-4 border-t border-slate-800">
-                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
-                            <i class="fab fa-github"></i> Repositório
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJETO 02 -->
-                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-textMain">IT Asset Manager</h3>
-                            <span class="text-xs bg-sky-950 text-accentBlue border border-sky-800 px-2.5 py-1 rounded-full font-medium">Inventário</span>
-                        </div>
-                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
-                            Sistema de controle de equipamentos corporativos (computadores, impressoras e ativos), centralizando números de série, IPs, setores e histórico de manutenção.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Jinja2</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">SQLite</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pt-4 border-t border-slate-800">
-                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
-                            <i class="fab fa-github"></i> Repositório
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJETO 03 -->
-                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-textMain">Network & Server Monitor</h3>
-                            <span class="text-xs bg-emerald-950 text-accent border border-emerald-800 px-2.5 py-1 rounded-full font-medium">Infra & Redes</span>
-                        </div>
-                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
-                            Aplicação de monitoramento automatizado que verifica a conectividade, portas e disponibilidade HTTP de servidores críticos (AD, Servidor Web, Bancos de Dados) em tempo real.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Asyncio</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">FastAPI</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Docker</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pt-4 border-t border-slate-800">
-                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
-                            <i class="fab fa-github"></i> Repositório
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PROJETO 04 -->
-                <div class="bg-bgCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-textMain">IT Automation Toolkit</h3>
-                            <span class="text-xs bg-sky-950 text-accentBlue border border-sky-800 px-2.5 py-1 rounded-full font-medium">CLI / Scripts</span>
-                        </div>
-                        <p class="text-textMuted text-sm mb-6 leading-relaxed">
-                            Kit de scripts em Python para coleta automatizada de dados de hardware/sistema (IP, RAM, disco, processos), gerando relatórios rápidos direto pelo terminal.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Python</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Automação OS</span>
-                            <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">MySQL Connector</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pt-4 border-t border-slate-800">
-                        <a href="https://github.com/josias-araujo" target="_blank" class="text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
-                            <i class="fab fa-github"></i> Repositório
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="text-accent">#</span> Experiência Profissional
-            </h2>
-
-            <div class="space-y-8 border-l-2 border-slate-800 pl-6 ml-2">
-                
-                <!-- Item 1 -->
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-accent border-4 border-bgMain"></div>
-                    <span class="text-xs text-accent font-semibold tracking-wider uppercase">01/2026 — 07/2026</span>
-                    <h3 class="text-lg font-bold text-textMain mt-1">Técnico de Informática — HCOE</h3>
-                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
-                        Atuação com suporte técnico N1/N2, manutenção corretiva e preventiva de computadores e sistemas operacionais, administração de usuários e acessos, infraestrutura de redes e periféricos.
-                    </p>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-bgMain"></div>
-                    <span class="text-xs text-textMuted font-semibold tracking-wider uppercase">08/2025 — 01/2026</span>
-                    <h3 class="text-lg font-bold text-textMain mt-1">Técnico de Suporte — Avance Tecnologia</h3>
-                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
-                        Suporte técnico remoto e presencial estruturado, configuração e suporte a servidores Windows, manutenção de infraestrutura de TI e atendimento focado em resolução de incidentes.
-                    </p>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-bgMain"></div>
-                    <span class="text-xs text-textMuted font-semibold tracking-wider uppercase">02/2025 — 07/2025</span>
-                    <h3 class="text-lg font-bold text-textMain mt-1">Estagiário de TI — SEDUC</h3>
-                    <p class="text-textMuted text-sm mt-2 leading-relaxed">
-                        Atendimento técnico a usuários, manutenção de equipamentos de informática, instalação e configuração de sistemas operacionais e suporte a redes locais.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- TECNOLOGIAS -->
-    <section id="tecnologias" class="py-24 px-6 border-t border-slate-800/60">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="text-accent">#</span> Tecnologias & Stack
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Dev -->
-                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
-                    <h3 class="font-bold text-textMain mb-4 text-accent">Desenvolvimento</h3>
-                    <ul class="space-y-2 text-sm text-textMuted">
-                        <li>• Python</li>
-                        <li>• FastAPI & APIs REST</li>
-                        <li>• SQL / SQLAlchemy</li>
-                        <li>• MySQL & PostgreSQL</li>
-                    </ul>
-                </div>
-
-                <!-- Infra -->
-                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
-                    <h3 class="font-bold text-textMain mb-4 text-accentBlue">Infraestrutura</h3>
-                    <ul class="space-y-2 text-sm text-textMuted">
-                        <li>• Windows Server</li>
-                        <li>• Active Directory</li>
-                        <li>• Redes (TCP/IP, DNS, DHCP)</li>
-                        <li>• Suporte N1 / N2</li>
-                    </ul>
-                </div>
-
-                <!-- Tools & Practices -->
-                <div class="bg-bgCard border border-slate-800 p-6 rounded-2xl">
-                    <h3 class="font-bold text-textMain mb-4 text-emerald-400">Ferramentas & Práticas</h3>
-                    <ul class="space-y-2 text-sm text-textMuted">
-                        <li>• Git & GitHub</li>
-                        <li>• Docker</li>
-                        <li>• Linux & VS Code</li>
-                        <li>• Clean Code & POO</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATO / CTA -->
-    <section id="contato" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40 text-center">
-        <div class="max-w-3xl mx-auto space-y-6">
-            <h2 class="text-3xl font-extrabold text-textMain">Vamos construir soluções melhores?</h2>
-            <p class="text-textMuted max-w-xl mx-auto">
-                Da infraestrutura ao código. Experiência prática em TI aplicada à criação de soluções inteligentes com Python.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="mailto:seu-email@exemplo.com" class="bg-accent hover:bg-emerald-600 text-bgMain font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-accent/20 flex items-center gap-2">
-                    <i class="fas fa-envelope"></i> Entrar em Contato
-                </a>
-                <a href="https://github.com/josias-araujo" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="bg-bgCard hover:bg-slate-800 text-textMain border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-8 border-t border-slate-800 text-center text-xs text-textMuted">
-        <p>© 2026 Josias Araújo. Todos os direitos reservados.</p>
     </footer>
 
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
-
-
-
