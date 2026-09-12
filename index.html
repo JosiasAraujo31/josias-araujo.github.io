@@ -2,43 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="theme-color"
-        content="#050507"
-    >
-
-    <meta
-        name="description"
-        content="Josias Araújo — Desenvolvimento de Software, Inteligência Artificial, Automação e Infraestrutura."
-    >
-
-    <meta
-        name="author"
-        content="Josias Araújo"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050507">
+    <meta name="description" content="Josias Araújo — Desenvolvimento de Software, Inteligência Artificial, Automação e Infraestrutura.">
+    <meta name="author" content="Josias Araújo">
     <title>JA // Digital Systems</title>
 
     <!-- =====================================================
-         FONTS
+         FONTS & PRELOADS
     ====================================================== -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        as="style"
     >
-
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet"
@@ -47,1584 +27,512 @@
     <!-- =====================================================
          CSS
     ====================================================== -->
-
- <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <!-- =========================================================
-     PAGE LOADER
-========================================================= -->
-
-<div
-    id="bootScreen"
-    class="boot-screen"
->
-
-    <div class="boot-glow"></div>
-
-    <div class="boot-inner">
-
-        <div class="boot-logo">
-            <span>&lt;</span>JA<span>/&gt;</span>
-        </div>
-
-        <div class="boot-title">
-            DIGITAL SYSTEM
-        </div>
-
-        <div class="boot-subtitle">
-            INITIALIZING INTERFACE
-        </div>
-
-        <div class="boot-progress">
-
-            <div
-                id="bootProgressBar"
-                class="boot-progress-bar"
-            ></div>
-
-        </div>
-
-        <div
-            id="bootPercent"
-            class="boot-percent"
-        >
-            0%
-        </div>
-
-        <div class="boot-log">
-
-            <div>
-                <span>01</span>
-                LOADING CORE
-                <b>OK</b>
-            </div>
-
-            <div>
-                <span>02</span>
-                INITIALIZING NEURAL GRID
-                <b>OK</b>
-            </div>
-
-            <div>
-                <span>03</span>
-                CONNECTING SYSTEMS
-                <b>OK</b>
-            </div>
-
-            <div>
-                <span>04</span>
-                INTERFACE READY
-                <b>OK</b>
-            </div>
-
-        </div>
-
-        <div class="boot-online">
-            SYSTEM ONLINE
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     BACKGROUND SYSTEM
-========================================================= -->
-
-<canvas id="circuitCanvas"></canvas>
-
-<div class="ambient ambient-one"></div>
-<div class="ambient ambient-two"></div>
-
-<div class="noise"></div>
-
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<div
-    class="mouse-light"
-    id="mouseLight"
-></div>
-
-
-<!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header class="header">
-
     <div class="nav-container">
-
-        <a
-            href="#home"
-            class="logo"
-            aria-label="Página inicial"
-        >
-
+        <a href="#home" class="logo" aria-label="Página inicial">
             <span>&lt;</span>
             JA
             <span>/&gt;</span>
-
         </a>
 
-
         <nav class="nav">
-
-            <a
-                href="#home"
-                class="nav-link active"
-            >
+            <a href="#home" class="nav-link active">
                 <small>01</small>
                 INÍCIO
             </a>
-
-            <a
-                href="#sobre"
-                class="nav-link"
-            >
+            <a href="#sobre" class="nav-link">
                 <small>02</small>
                 SOBRE
             </a>
-
-            <a
-                href="#skills"
-                class="nav-link"
-            >
+            <a href="#skills" class="nav-link">
                 <small>03</small>
                 STACK
             </a>
-
-            <a
-                href="#projetos"
-                class="nav-link"
-            >
+            <a href="#projetos" class="nav-link">
                 <small>04</small>
                 PROJETOS
             </a>
-
-            <a
-                href="#experiencia"
-                class="nav-link"
-            >
+            <a href="#experiencia" class="nav-link">
                 <small>05</small>
                 EXPERIÊNCIA
             </a>
-
-            <a
-                href="#contato"
-                class="nav-link"
-            >
+            <a href="#contato" class="nav-link">
                 <small>06</small>
                 CONTATO
             </a>
-
         </nav>
 
-
         <div class="header-social">
-
-            <a
-                href="https://github.com/JosiasAraujo31"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-            >
+            <a href="https://github.com/JosiasAraujo31" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 GH ↗
             </a>
-
         </div>
 
-
-        <button
-            id="mobileMenu"
-            class="mobile-menu"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-        >
-
+        <button id="mobileMenu" class="mobile-menu" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-
         </button>
-
     </div>
-
 </header>
-
 
 <!-- =========================================================
      MAIN
 ========================================================= -->
-
 <main>
-
 
 <!-- =========================================================
      HERO
 ========================================================= -->
-
-<section
-    id="home"
-    class="hero"
->
-
-    <div class="hero-grid"></div>
-
-    <div class="hero-orbit orbit-one"></div>
-    <div class="hero-orbit orbit-two"></div>
-
+<section id="home" class="hero">
     <div class="container hero-container">
 
-
         <!-- HERO TEXT -->
-
-        <div class="hero-content reveal">
-
+        <div class="hero-content">
             <div class="system-status">
-
                 <span class="status-light"></span>
-
-                <span>
-                    SYSTEM ONLINE
-                </span>
-
-                <span class="status-separator">
-                    //
-                </span>
-
-                <span>
-                    AVAILABLE
-                </span>
-
+                <span>SYSTEM ONLINE</span>
+                <span class="status-separator">//</span>
+                <span>AVAILABLE</span>
             </div>
-
 
             <div class="hero-code">
-                &lt;software_engineer /&gt;
+                &lt;Desenvolvedor_Júnior/&gt;
             </div>
 
-
             <h1>
-
                 Construindo
-
-                <span class="gradient">
-                    sistemas
-                </span>
-
+                <span class="gradient">sistemas</span>
                 que transformam
-
-                <span class="gradient">
-                    tecnologia.
-                </span>
-
+                <span class="gradient">tecnologia.</span>
             </h1>
 
-
             <p class="hero-description">
-
                 Desenvolvimento de software, inteligência
                 artificial, automação e infraestrutura para
                 transformar problemas complexos em sistemas
                 digitais inteligentes.
-
             </p>
 
-
             <div class="hero-actions">
-
-                <a
-                    href="#projetos"
-                    class="btn btn-primary magnetic"
-                >
-
-                    <span>
-                        EXPLORAR PROJETOS
-                    </span>
-
+                <a href="#projetos" class="btn btn-primary">
+                    <span>EXPLORAR PROJETOS</span>
                     <b>↗</b>
-
                 </a>
-
-
-                <a
-                    href="https://github.com/JosiasAraujo31"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-outline magnetic"
-                >
-
+                <a href="https://github.com/JosiasAraujo31" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                     GITHUB ↗
-
                 </a>
-
             </div>
-
 
             <div class="hero-meta">
-
                 <div>
-
-                    <span>
-                        LOCATION
-                    </span>
-
-                    <strong>
-                        BR / BA
-                    </strong>
-
+                    <span>LOCATION</span>
+                    <strong>BR / BA</strong>
                 </div>
-
                 <div>
-
-                    <span>
-                        FOCUS
-                    </span>
-
-                    <strong>
-                        SOFTWARE / AI
-                    </strong>
-
+                    <span>FOCUS</span>
+                    <strong>SOFTWARE / AI</strong>
                 </div>
-
                 <div>
-
-                    <span>
-                        STATUS
-                    </span>
-
-                    <strong class="system-live">
-                        ONLINE
-                    </strong>
-
+                    <span>STATUS</span>
+                    <strong class="system-live">ONLINE</strong>
                 </div>
-
             </div>
-
         </div>
 
-
-        <!-- =================================================
-             HERO VISUAL
-        ================================================== -->
-
-        <div class="hero-visual reveal">
-
-
+        <!-- HERO VISUAL -->
+        <div class="hero-visual">
             <div class="hud hud-top-left">
-
-                <span>
-                    SYS
-                </span>
-
-                <strong>
-                    98.4%
-                </strong>
-
+                <span>SYS</span>
+                <strong>98.4%</strong>
             </div>
-
 
             <div class="hud hud-top-right">
-
-                <span>
-                    CORE
-                </span>
-
-                <strong>
-                    STABLE
-                </strong>
-
+                <span>CORE</span>
+                <strong>STABLE</strong>
             </div>
-
 
             <div class="profile-frame">
-
-                <div class="frame-grid"></div>
-
-                <div class="frame-corner fc-1"></div>
-                <div class="frame-corner fc-2"></div>
-                <div class="frame-corner fc-3"></div>
-                <div class="frame-corner fc-4"></div>
-
-
                 <div class="profile-image">
-
                     <img
-                        src="assets/profile.jpg"
+                        src="assets/profile.jpeg"
                         alt="Josias Araújo"
+                        loading="lazy"
+                        decoding="async"
                     >
-
                     <div class="image-tint"></div>
-
-                    <div class="scanline"></div>
-
                 </div>
-
-
-                <div class="face-data data-one">
-                    IDENTITY // VERIFIED
-                </div>
-
-                <div class="face-data data-two">
-                    SYSTEM // ACTIVE
-                </div>
-
 
                 <div class="profile-name">
-
-                    <span>
-                        IDENTITY
-                    </span>
-
-                    <strong>
-                        JOSIAS ARAÚJO
-                    </strong>
-
+                    <span>IDENTITY</span>
+                    <strong>JOSIAS ARAÚJO</strong>
                 </div>
-
 
                 <div class="profile-role">
-
-                    <span>
-                        ROLE
-                    </span>
-
-                    <strong>
-                        SOFTWARE_ENGINEER
-                    </strong>
-
+                    <span>ROLE</span>
+                    <strong>JUNIOR_DEV</strong>
                 </div>
-
             </div>
 
-
-            <!-- =================================================
-                 TERMINAL
-            ================================================== -->
-
+            <!-- TERMINAL -->
             <div class="terminal">
-
                 <div class="terminal-head">
-
                     <div class="terminal-lights">
-
                         <i></i>
                         <i></i>
                         <i></i>
-
                     </div>
-
-                    <span>
-                        root@josias:~
-                    </span>
-
+                    <span>root@josias:~</span>
                 </div>
-
 
                 <div class="terminal-body">
+                    <div><em>$</em> whoami</div>
+                    <p>Josias Araújo</p>
 
-                    <div>
+                    <div><em>$</em> system.status</div>
+                    <p><span class="terminal-live">ONLINE</span></p>
 
-                        <em>$</em>
-                        whoami
+                    <div><em>$</em> neural.network</div>
+                    <p>CONNECTED</p>
 
-                    </div>
-
-                    <p>
-                        Josias Araújo
-                    </p>
-
-
-                    <div>
-
-                        <em>$</em>
-                        system.status
-
-                    </div>
-
-                    <p>
-
-                        <span class="terminal-live">
-                            ONLINE
-                        </span>
-
-                    </p>
-
-
-                    <div>
-
-                        <em>$</em>
-                        neural.network
-
-                    </div>
-
-                    <p>
-                        CONNECTED
-                    </p>
-
-
-                    <div>
-
-                        <em>$</em>
-                        _
-                        <span class="terminal-cursor"></span>
-
-                    </div>
-
+                    <div><em>$</em> _ <span class="terminal-cursor"></span></div>
                 </div>
-
             </div>
-
 
             <div class="hud hud-bottom">
-
-                <span>
-                    NETWORK
-                </span>
-
-                <strong>
-                    CONNECTED
-                </strong>
-
+                <span>NETWORK</span>
+                <strong>CONNECTED</strong>
             </div>
-
         </div>
 
     </div>
 
-
     <div class="scroll-down">
-
-        <span>
-            SCROLL TO EXPLORE
-        </span>
-
+        <span>SCROLL TO EXPLORE</span>
         <i></i>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      SOBRE
 ========================================================= -->
-
-<section
-    id="sobre"
-    class="section"
->
-
+<section id="sobre" class="section">
     <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="section-index">
-                01
-            </div>
-
+        <div class="section-head">
+            <div class="section-index">01</div>
             <div>
-
-                <span class="section-label">
-                    ABOUT SYSTEM
-                </span>
-
-                <h2>
-
-                    Tecnologia com
-
-                    <span>
-                        propósito.
-                    </span>
-
-                </h2>
-
+                <span class="section-label">ABOUT SYSTEM</span>
+                <h2>Tecnologia com <span>propósito.</span></h2>
             </div>
-
         </div>
-
 
         <div class="about-layout">
-
-
-            <div class="about-main reveal">
-
-                <div class="big-number">
-                    01
-                </div>
-
+            <div class="about-main">
                 <p class="about-highlight">
-
-                    Não desenvolvo apenas sistemas.
-                    Construo experiências digitais,
-                    automatizo processos e transformo
-                    problemas complexos em soluções.
-
+                    Não desenvolvo apenas sistemas. Construo experiências digitais, automatizo processos e transformo problemas complexos em soluções.
                 </p>
-
-
                 <p>
-
-                    Minha abordagem combina desenvolvimento,
-                    inteligência artificial, automação e
-                    infraestrutura para criar soluções
-                    eficientes, escaláveis e modernas.
-
+                    Minha abordagem combina desenvolvimento, inteligência artificial, automação e infraestrutura para criar soluções eficientes, escaláveis e modernas.
                 </p>
-
-
                 <p>
-
-                    Cada projeto é tratado como um sistema:
-                    analisamos o problema, projetamos a
-                    arquitetura e construímos uma solução
-                    preparada para evoluir.
-
+                    Cada projeto é tratado como um sistema: analisamos o problema, projetamos a arquitetura e construímos uma solução preparada para evoluir.
                 </p>
-
             </div>
-
 
             <div class="about-cards">
-
-
-                <div class="about-card reveal">
-
-                    <span>
-                        01
-                    </span>
-
-                    <strong>
-                        CREATE
-                    </strong>
-
-                    <p>
-                        Criar experiências digitais.
-                    </p>
-
+                <div class="about-card">
+                    <span>01</span>
+                    <strong>CREATE</strong>
+                    <p>Criar experiências digitais.</p>
                 </div>
-
-
-                <div class="about-card reveal">
-
-                    <span>
-                        02
-                    </span>
-
-                    <strong>
-                        AUTOMATE
-                    </strong>
-
-                    <p>
-                        Automatizar processos.
-                    </p>
-
+                <div class="about-card">
+                    <span>02</span>
+                    <strong>AUTOMATE</strong>
+                    <p>Automatizar processos.</p>
                 </div>
-
-
-                <div class="about-card reveal">
-
-                    <span>
-                        03
-                    </span>
-
-                    <strong>
-                        CONNECT
-                    </strong>
-
-                    <p>
-                        Integrar sistemas.
-                    </p>
-
+                <div class="about-card">
+                    <span>03</span>
+                    <strong>CONNECT</strong>
+                    <p>Integrar sistemas.</p>
                 </div>
-
-
-                <div class="about-card reveal">
-
-                    <span>
-                        04
-                    </span>
-
-                    <strong>
-                        EVOLVE
-                    </strong>
-
-                    <p>
-                        Evoluir continuamente.
-                    </p>
-
+                <div class="about-card">
+                    <span>04</span>
+                    <strong>EVOLVE</strong>
+                    <p>Evoluir continuamente.</p>
                 </div>
-
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      SKILLS
 ========================================================= -->
-
-<section
-    id="skills"
-    class="section dark-section"
->
-
+<section id="skills" class="section dark-section">
     <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="section-index">
-                02
-            </div>
-
+        <div class="section-head">
+            <div class="section-index">02</div>
             <div>
-
-                <span class="section-label">
-                    TECHNOLOGY STACK
-                </span>
-
-                <h2>
-
-                    Ferramentas para
-
-                    <span>
-                        construir.
-                    </span>
-
-                </h2>
-
+                <span class="section-label">TECHNOLOGY STACK</span>
+                <h2>Ferramentas para <span>construir.</span></h2>
             </div>
-
         </div>
 
-
         <div class="tech-grid">
-
-
-            <article class="tech-card reveal">
-
-                <div class="tech-icon">
-                    &lt;/&gt;
-                </div>
-
-                <span class="tech-number">
-                    01
-                </span>
-
-                <h3>
-                    Development
-                </h3>
-
-                <p>
-
-                    Aplicações web modernas,
-                    interfaces responsivas e
-                    sistemas digitais.
-
-                </p>
-
+            <article class="tech-card">
+                <div class="tech-icon">&lt;/&gt;</div>
+                <span class="tech-number">01</span>
+                <h3>Development</h3>
+                <p>Aplicações web modernas, interfaces responsivas e sistemas digitais.</p>
                 <div class="tags">
-
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
                     <span>Python</span>
-
                 </div>
-
             </article>
 
-
-            <article class="tech-card reveal">
-
-                <div class="tech-icon">
-                    AI
-                </div>
-
-                <span class="tech-number">
-                    02
-                </span>
-
-                <h3>
-                    Artificial Intelligence
-                </h3>
-
-                <p>
-
-                    Agentes inteligentes,
-                    integração com modelos de IA
-                    e automações cognitivas.
-
-                </p>
-
+            <article class="tech-card">
+                <div class="tech-icon">AI</div>
+                <span class="tech-number">02</span>
+                <h3>Artificial Intelligence</h3>
+                <p>Agentes inteligentes, integração com modelos de IA e automações cognitivas.</p>
                 <div class="tags">
-
                     <span>AI</span>
                     <span>LLM</span>
                     <span>Agents</span>
                     <span>API</span>
-
                 </div>
-
             </article>
 
-
-            <article class="tech-card reveal">
-
-                <div class="tech-icon">
-                    ⚙
-                </div>
-
-                <span class="tech-number">
-                    03
-                </span>
-
-                <h3>
-                    Automation
-                </h3>
-
-                <p>
-
-                    Workflows inteligentes,
-                    integrações e processos
-                    automatizados.
-
-                </p>
-
+            <article class="tech-card">
+                <div class="tech-icon">⚙</div>
+                <span class="tech-number">03</span>
+                <h3>Automation</h3>
+                <p>Workflows inteligentes, integrações e processos automatizados.</p>
                 <div class="tags">
-
                     <span>n8n</span>
                     <span>Webhook</span>
                     <span>API</span>
                     <span>JSON</span>
-
                 </div>
-
             </article>
 
-
-            <article class="tech-card reveal">
-
-                <div class="tech-icon">
-                    &gt;_
-                </div>
-
-                <span class="tech-number">
-                    04
-                </span>
-
-                <h3>
-                    Infrastructure
-                </h3>
-
-                <p>
-
-                    Servidores, Linux, containers,
-                    redes e ambientes corporativos.
-
-                </p>
-
+            <article class="tech-card">
+                <div class="tech-icon">&gt;_</div>
+                <span class="tech-number">04</span>
+                <h3>Infrastructure</h3>
+                <p>Servidores, Linux, containers, redes e ambientes corporativos.</p>
                 <div class="tags">
-
                     <span>Linux</span>
                     <span>Docker</span>
                     <span>AD</span>
                     <span>Server</span>
-
                 </div>
-
             </article>
-
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      PROJETOS
 ========================================================= -->
-
-<section
-    id="projetos"
-    class="section projects-section"
->
-
+<section id="projetos" class="section projects-section">
     <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="section-index">
-                03
-            </div>
-
+        <div class="section-head">
+            <div class="section-index">03</div>
             <div>
-
-                <span class="section-label">
-                    SELECTED PROJECTS
-                </span>
-
-                <h2>
-
-                    Projetos em
-
-                    <span>
-                        execução.
-                    </span>
-
-                </h2>
-
+                <span class="section-label">SELECTED PROJECTS</span>
+                <h2>Projetos em <span>execução.</span></h2>
             </div>
-
         </div>
 
-
         <div class="projects">
-
-
-            <!-- =================================================
-                 JOBHUNTER
-            ================================================== -->
-
-            <article
-                class="project project-featured reveal"
-                data-tilt
-            >
-
-                <div class="project-glow"></div>
-
-                <div class="project-bg">
-                    01
-                </div>
-
-
+            <!-- JOBHUNTER -->
+            <article class="project project-featured">
+                <div class="project-bg">01</div>
                 <div class="project-top">
-
-                    <span>
-                        FEATURED PROJECT
-                    </span>
-
-                    <span>
-                        AI / WEB APP / AUTOMATION
-                    </span>
-
+                    <span>FEATURED PROJECT</span>
+                    <span>AI / WEB APP / AUTOMATION</span>
                 </div>
-
 
                 <div class="project-main">
-
-                    <span class="project-label">
-                        PRODUCT // LIVE
-                    </span>
-
-                    <h3>
-                        JOBHUNTER<span>.IA</span>
-                    </h3>
-
+                    <span class="project-label">PRODUCT // LIVE</span>
+                    <h3>JOBHUNTER<span>.IA</span></h3>
                     <p>
-
-                        Plataforma inteligente criada para
-                        centralizar oportunidades profissionais,
-                        acompanhar candidaturas e transformar
-                        a busca por emprego em um processo
+                        Plataforma inteligente criada para centralizar oportunidades profissionais,
+                        acompanhar candidaturas e transformar a busca por emprego em um processo
                         mais organizado e estratégico.
-
                     </p>
-
-
                     <div class="project-tech">
-
-                        <span>
-                            AI
-                        </span>
-
-                        <span>
-                            WEB
-                        </span>
-
-                        <span>
-                            AUTOMATION
-                        </span>
-
-                        <span>
-                            API
-                        </span>
-
-                        <span>
-                            DATA
-                        </span>
-
+                        <span>AI</span>
+                        <span>WEB</span>
+                        <span>AUTOMATION</span>
+                        <span>API</span>
+                        <span>DATA</span>
                     </div>
-
                 </div>
-
 
                 <div class="project-bottom">
-
                     <div class="project-live">
-
                         <span class="live-dot"></span>
-
                         SYSTEM ONLINE
-
                     </div>
-
-
                     <div class="project-actions">
-
-                        <a
-                            href="https://radar.josiasaraujo.work/login"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LIVE PROJECT ↗
-                        </a>
-
-                        <a
-                            href="https://github.com/JosiasAraujo31/JOBHUNTER.IA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GITHUB ↗
-                        </a>
-
+                        <a href="https://radar.josiasaraujo.work/login" target="_blank" rel="noopener noreferrer">LIVE PROJECT ↗</a>
+                        <a href="https://github.com/JosiasAraujo31/JOBHUNTER.IA" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
                     </div>
-
                 </div>
-
             </article>
 
-
-            <!-- =================================================
-                 PROJECT 02
-            ================================================== -->
-
-            <article
-                class="project reveal"
-                data-tilt
-            >
-
-                <div class="project-bg">
-                    02
-                </div>
-
+            <!-- PROJECT 02 -->
+            <article class="project">
+                <div class="project-bg">02</div>
                 <div class="project-top">
-
-                    <span>
-                        PROJECT_02
-                    </span>
-
-                    <span>
-                        AI / AUTOMATION
-                    </span>
-
+                    <span>PROJECT_02</span>
+                    <span>AI / AUTOMATION</span>
                 </div>
-
 
                 <div class="project-main">
-
-                    <span class="project-label">
-                        AUTOMATION SYSTEM
-                    </span>
-
-                    <h3>
-                        AI Automation
-                    </h3>
-
-                    <p>
-
-                        Workflows inteligentes conectando
-                        APIs, agentes de inteligência artificial,
-                        webhooks e sistemas externos.
-
-                    </p>
-
+                    <span class="project-label">AUTOMATION SYSTEM</span>
+                    <h3>AI Automation</h3>
+                    <p>Workflows inteligentes conectando APIs, agentes de inteligência artificial, webhooks e sistemas externos.</p>
                 </div>
 
-
                 <div class="project-bottom">
-
                     <div class="tags">
-
                         <span>AI</span>
                         <span>N8N</span>
                         <span>API</span>
-
                     </div>
-
-                    <a href="#contato">
-                        DISCUSS PROJECT ↗
-                    </a>
-
+                    <a href="#contato">DISCUSS PROJECT ↗</a>
                 </div>
-
             </article>
 
-
-            <!-- =================================================
-                 PROJECT 03
-            ================================================== -->
-
-            <article
-                class="project reveal"
-                data-tilt
-            >
-
-                <div class="project-bg">
-                    03
-                </div>
-
+            <!-- PROJECT 03 -->
+            <article class="project">
+                <div class="project-bg">03</div>
                 <div class="project-top">
-
-                    <span>
-                        PROJECT_03
-                    </span>
-
-                    <span>
-                        INFRASTRUCTURE
-                    </span>
-
+                    <span>PROJECT_03</span>
+                    <span>INFRASTRUCTURE</span>
                 </div>
-
 
                 <div class="project-main">
-
-                    <span class="project-label">
-                        INFRASTRUCTURE LAB
-                    </span>
-
-                    <h3>
-                        Systems Infrastructure
-                    </h3>
-
-                    <p>
-
-                        Ambientes Linux, servidores,
-                        containers, redes, Active Directory
-                        e infraestrutura para aplicações
-                        e serviços digitais.
-
-                    </p>
-
+                    <span class="project-label">INFRASTRUCTURE LAB</span>
+                    <h3>Systems Infrastructure</h3>
+                    <p>Ambientes Linux, servidores, containers, redes, Active Directory e infraestrutura para aplicações e serviços digitais.</p>
                 </div>
 
-
                 <div class="project-bottom">
-
                     <div class="tags">
-
                         <span>LINUX</span>
                         <span>DOCKER</span>
                         <span>SERVER</span>
                         <span>AD</span>
-
                     </div>
-
-                    <a href="#contato">
-                        DISCUSS PROJECT ↗
-                    </a>
-
+                    <a href="#contato">DISCUSS PROJECT ↗</a>
                 </div>
-
             </article>
-
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      EXPERIÊNCIA
 ========================================================= -->
-
-<section
-    id="experiencia"
-    class="section dark-section"
->
-
+<section id="experiencia" class="section dark-section">
     <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="section-index">
-                04
-            </div>
-
+        <div class="section-head">
+            <div class="section-index">04</div>
             <div>
-
-                <span class="section-label">
-                    SYSTEM LOG
-                </span>
-
-                <h2>
-
-                    Minha
-
-                    <span>
-                        evolução.
-                    </span>
-
-                </h2>
-
+                <span class="section-label">SYSTEM LOG</span>
+                <h2>Minha <span>evolução.</span></h2>
             </div>
-
         </div>
-
 
         <div class="timeline">
-
-
-            <div class="timeline-item reveal">
-
+            <div class="timeline-item">
                 <div class="timeline-node"></div>
-
-                <span>
-                    2026 — NOW
-                </span>
-
-                <h3>
-                    Development & Technology
-                </h3>
-
-                <p>
-
-                    Desenvolvimento de soluções,
-                    automações e integração de
-                    sistemas.
-
-                </p>
-
+                <span>2026 — NOW</span>
+                <h3>Development & Technology</h3>
+                <p>Desenvolvimento de soluções, automações e integração de sistemas.</p>
             </div>
 
-
-            <div class="timeline-item reveal">
-
+            <div class="timeline-item">
                 <div class="timeline-node"></div>
-
-                <span>
-                    EXPERIENCE
-                </span>
-
-                <h3>
-                    Infrastructure & Systems
-                </h3>
-
-                <p>
-
-                    Ambientes Linux, servidores,
-                    redes e sistemas corporativos.
-
-                </p>
-
+                <span>EXPERIENCE</span>
+                <h3>Infrastructure & Systems</h3>
+                <p>Ambientes Linux, servidores, redes e sistemas corporativos.</p>
             </div>
 
-
-            <div class="timeline-item reveal">
-
+            <div class="timeline-item">
                 <div class="timeline-node"></div>
-
-                <span>
-                    CONTINUOUS
-                </span>
-
-                <h3>
-                    Research & Development
-                </h3>
-
-                <p>
-
-                    Pesquisa contínua em inteligência
-                    artificial, automação e novas
-                    tecnologias.
-
-                </p>
-
+                <span>CONTINUOUS</span>
+                <h3>Research & Development</h3>
+                <p>Pesquisa contínua em inteligência artificial, automação e novas tecnologias.</p>
             </div>
-
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      CONTACT
 ========================================================= -->
-
-<section
-    id="contato"
-    class="section contact-section"
->
-
+<section id="contato" class="section contact-section">
     <div class="container">
-
-
-        <div class="contact-box reveal">
-
-            <div class="contact-grid"></div>
-
-            <span class="section-label">
-                05 / CONNECTION
-            </span>
-
-
-            <h2>
-
-                Vamos construir
-
-                <span>
-                    algo extraordinário?
-                </span>
-
-            </h2>
-
-
-            <p>
-
-                Se você tem uma ideia,
-                projeto ou problema que precisa
-                de tecnologia, vamos conversar.
-
-            </p>
-
-
+        <div class="contact-box">
+            <span class="section-label">05 / CONNECTION</span>
+            <h2>Vamos construir <span>algo extraordinário?</span></h2>
+            <p>Se você tem uma ideia, projeto ou problema que precisa de tecnologia, vamos conversar.</p>
             <div class="contact-actions">
-
-                <a
-                    href="mailto:seuemail@email.com"
-                    class="btn btn-primary magnetic"
-                >
-
-                    INICIAR CONEXÃO
-
-                    <b>↗</b>
-
+                <a href="mailto:josias.araujo.ti@gmail.com" class="btn btn-primary">
+                    INICIAR CONEXÃO <b>↗</b>
                 </a>
-
-
-                <a
-                    href="https://github.com/JosiasAraujo31"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-outline magnetic"
-                >
-
+                <a href="https://github.com/JosiasAraujo31" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                     GITHUB ↗
-
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
 </main>
-
 
 <!-- =========================================================
      FOOTER
 ========================================================= -->
-
 <footer>
-
     <div class="container footer-inner">
-
-
         <div>
-
-            <div class="footer-logo">
-
-                &lt;JA /&gt;
-
-            </div>
-
-            <p>
-                DIGITAL SYSTEMS // 2026
-            </p>
-
+            <div class="footer-logo">&lt;JA /&gt;</div>
+            <p>DIGITAL SYSTEMS // 2026</p>
         </div>
-
-
         <div class="footer-social">
-
-            <a
-                href="https://github.com/JosiasAraujo31"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GITHUB ↗
-            </a>
-
-            <a href="#projetos">
-                PROJECTS ↗
-            </a>
-
+            <a href="https://github.com/JosiasAraujo31" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+            <a href="#projetos">PROJECTS ↗</a>
         </div>
-
-
         <div class="footer-status">
-
             <span></span>
-
             ALL SYSTEMS OPERATIONAL
-
         </div>
-
-
         <div class="footer-copy">
-
             © 2026 Josias Araújo
-
         </div>
-
     </div>
-
 </footer>
-
-
-<!-- =========================================================
-     COMMAND CENTER
-========================================================= -->
-
-<div
-    id="commandCenter"
-    class="command-overlay"
->
-
-    <div class="command-box">
-
-
-        <div class="command-head">
-
-            <span>
-                COMMAND CENTER
-            </span>
-
-            <button id="closeCommand">
-                ESC
-            </button>
-
-        </div>
-
-
-        <div class="command-input">
-
-            <span>
-                &gt;
-            </span>
-
-            <input
-                id="commandInput"
-                type="text"
-                placeholder="Digite um comando..."
-                autocomplete="off"
-            >
-
-        </div>
-
-
-        <div class="command-options">
-
-
-            <button data-command="home">
-
-                <span>01</span>
-                HOME
-
-            </button>
-
-
-            <button data-command="sobre">
-
-                <span>02</span>
-                ABOUT
-
-            </button>
-
-
-            <button data-command="skills">
-
-                <span>03</span>
-                STACK
-
-            </button>
-
-
-            <button data-command="projetos">
-
-                <span>04</span>
-                PROJECTS
-
-            </button>
-
-
-            <button data-command="experiencia">
-
-                <span>05</span>
-                EXPERIENCE
-
-            </button>
-
-
-            <button data-command="contato">
-
-                <span>06</span>
-                CONTACT
-
-            </button>
-
-
-        </div>
-
-
-        <div class="command-footer">
-
-            CTRL + K
-
-            <span>
-                COMMAND CENTER
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
-
 
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
-
 <script src="script.js"></script>
 
 </body>
-
 </html>
